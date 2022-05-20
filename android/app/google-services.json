@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "561988430806",
+    "project_id": "handy-help-cb810",
+    "storage_bucket": "handy-help-cb810.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561988430806:android:32e544e2bf7f8c1fa6d277",
+        "android_client_info": {
+          "package_name": "com.example.gurdain_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561988430806-jhljstc8gvk83d8posdqn1ael6u6go2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7PgpvZgpobpNTJPwMMEznvjTAjClM4r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561988430806-jhljstc8gvk83d8posdqn1ael6u6go2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
