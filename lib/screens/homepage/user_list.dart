@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gurdain_app/api/profile.dart';
+import 'package:gurdain_app/controllers/app_controller.dart';
 import 'package:gurdain_app/screens/constants/constants.dart';
 import 'package:intl/intl.dart';
 
@@ -15,7 +16,7 @@ class ListUsers extends StatefulWidget {
 }
 
 class _ListUsersState extends State<ListUsers> {
-  late List<User> users;
+  late AppController appController;
   bool _loading = true;
   @override
   void initState() {
@@ -26,9 +27,7 @@ class _ListUsersState extends State<ListUsers> {
         _loading = false;
 
         if (value != null) {
-          users = value;
-        } else {
-          users = [];
+          appController.users = value;
         }
       });
     });
@@ -45,7 +44,7 @@ class _ListUsersState extends State<ListUsers> {
     return Padding(
       padding: const EdgeInsets.symmetric(
           horizontal: defaultPadding, vertical: defaultPadding),
-      child: users.isEmpty
+      child: appController.users.isEmpty
           ? const Center(
               child: Text(
               "Empty.",
@@ -55,9 +54,9 @@ class _ListUsersState extends State<ListUsers> {
             ))
           : Column(
               children: List.generate(
-                  users.length,
+                  appController.users.length,
                   (index) => UserCard(
-                        user: users[index],
+                        user: appController.users[index],
                       ))),
     );
   }

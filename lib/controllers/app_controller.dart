@@ -6,4 +6,5 @@ import '../models/user.dart';
 class AppController extends GetxController {
   List<EventModel> events = [];
   List<Job> jobs = [];
+  List<User> users = [];
 }
