@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:gurdain_app/api/profile.dart';
 import 'package:gurdain_app/controllers/app_controller.dart';
 import 'package:gurdain_app/screens/constants/constants.dart';
-import 'package:intl/intl.dart';
 
-import '../../models/user.dart';
 import 'user_card.dart';
 
 class ListUsers extends StatefulWidget {
@@ -22,6 +20,7 @@ class _ListUsersState extends State<ListUsers> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    appController = Get.find<AppController>();
     ProfileApi().getUsers().then((value) {
       setState(() {
         _loading = false;

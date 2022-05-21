@@ -34,7 +34,7 @@ class _EventsSliderState extends State<EventsSlider> {
         if (value != null) {
           appController.events = value;
           if (appController.events.isNotEmpty) {
-            items.add(appController.events[0]);
+            items=appController.events;
           }
 
           setState(() {
